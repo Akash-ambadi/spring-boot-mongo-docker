@@ -7,8 +7,8 @@ RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
 
 #It's copying the jar from jenkins under target directory
-COPY /home/ec2-user/*.jar $PROJECT_HOME/remoting.jar
+COPY /home/ec2-user/workspace/pipeline/target/spring-boot-mongo-1.0.jar $PROJECT_HOME/spring-boot-mongo.jar
 
 WORKDIR $PROJECT_HOME
 
-CMD ["java" ,"-jar","./remoting.jar"]
+CMD ["java" ,"-jar","./spring-boot-mongo.jar"]
