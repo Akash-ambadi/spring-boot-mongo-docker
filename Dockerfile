@@ -6,7 +6,7 @@ RUN apk update && apk add /bin/sh
 RUN mkdir -p /opt/app
 
 #It's copying the jar from jenkins under target directory
-COPY /home/ec2-user/workspace/pipeline/target/spring-boot-mongo-1.0.jar /opt/app/spring-boot-mongo.jar
+COPY target/spring-boot-mongo-1.0.jar /opt/app/spring-boot-mongo.jar
 
 WORKDIR /opt/app
 
